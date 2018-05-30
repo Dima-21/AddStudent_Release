@@ -43,13 +43,15 @@
             this.Check3 = new System.Windows.Forms.Label();
             this.Check2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.CBTeachers = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LSurname
             // 
             this.LSurname.AutoSize = true;
             this.LSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LSurname.Location = new System.Drawing.Point(18, 14);
+            this.LSurname.Location = new System.Drawing.Point(18, 53);
             this.LSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LSurname.Name = "LSurname";
             this.LSurname.Size = new System.Drawing.Size(85, 20);
@@ -60,7 +62,7 @@
             // 
             this.LName.AutoSize = true;
             this.LName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LName.Location = new System.Drawing.Point(18, 57);
+            this.LName.Location = new System.Drawing.Point(18, 96);
             this.LName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LName.Name = "LName";
             this.LName.Size = new System.Drawing.Size(44, 20);
@@ -71,7 +73,7 @@
             // 
             this.LPatronymic.AutoSize = true;
             this.LPatronymic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LPatronymic.Location = new System.Drawing.Point(18, 103);
+            this.LPatronymic.Location = new System.Drawing.Point(18, 142);
             this.LPatronymic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LPatronymic.Name = "LPatronymic";
             this.LPatronymic.Size = new System.Drawing.Size(87, 20);
@@ -80,7 +82,7 @@
             // 
             // TSurname
             // 
-            this.TSurname.Location = new System.Drawing.Point(125, 11);
+            this.TSurname.Location = new System.Drawing.Point(125, 50);
             this.TSurname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TSurname.Name = "TSurname";
             this.TSurname.Size = new System.Drawing.Size(210, 26);
@@ -88,7 +90,7 @@
             // 
             // TName
             // 
-            this.TName.Location = new System.Drawing.Point(125, 54);
+            this.TName.Location = new System.Drawing.Point(125, 93);
             this.TName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TName.Name = "TName";
             this.TName.Size = new System.Drawing.Size(210, 26);
@@ -96,7 +98,7 @@
             // 
             // TPatronymic
             // 
-            this.TPatronymic.Location = new System.Drawing.Point(125, 100);
+            this.TPatronymic.Location = new System.Drawing.Point(125, 139);
             this.TPatronymic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TPatronymic.Name = "TPatronymic";
             this.TPatronymic.Size = new System.Drawing.Size(210, 26);
@@ -106,7 +108,7 @@
             // 
             this.LDate.AutoSize = true;
             this.LDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LDate.Location = new System.Drawing.Point(18, 161);
+            this.LDate.Location = new System.Drawing.Point(18, 178);
             this.LDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LDate.Name = "LDate";
             this.LDate.Size = new System.Drawing.Size(132, 20);
@@ -115,7 +117,7 @@
             // 
             // Calendar
             // 
-            this.Calendar.Location = new System.Drawing.Point(22, 195);
+            this.Calendar.Location = new System.Drawing.Point(22, 212);
             this.Calendar.Margin = new System.Windows.Forms.Padding(14);
             this.Calendar.MaxSelectionCount = 1;
             this.Calendar.Name = "Calendar";
@@ -123,7 +125,7 @@
             // 
             // BApply
             // 
-            this.BApply.Location = new System.Drawing.Point(203, 267);
+            this.BApply.Location = new System.Drawing.Point(203, 284);
             this.BApply.Name = "BApply";
             this.BApply.Size = new System.Drawing.Size(130, 42);
             this.BApply.TabIndex = 8;
@@ -133,7 +135,7 @@
             // 
             // BCancel
             // 
-            this.BCancel.Location = new System.Drawing.Point(205, 315);
+            this.BCancel.Location = new System.Drawing.Point(205, 332);
             this.BCancel.Name = "BCancel";
             this.BCancel.Size = new System.Drawing.Size(130, 42);
             this.BCancel.TabIndex = 9;
@@ -146,7 +148,7 @@
             this.Check1.AutoSize = true;
             this.Check1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Check1.ForeColor = System.Drawing.Color.Red;
-            this.Check1.Location = new System.Drawing.Point(337, 9);
+            this.Check1.Location = new System.Drawing.Point(337, 48);
             this.Check1.Name = "Check1";
             this.Check1.Size = new System.Drawing.Size(17, 24);
             this.Check1.TabIndex = 10;
@@ -159,7 +161,7 @@
             this.Check3.AutoSize = true;
             this.Check3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Check3.ForeColor = System.Drawing.Color.Red;
-            this.Check3.Location = new System.Drawing.Point(337, 100);
+            this.Check3.Location = new System.Drawing.Point(337, 139);
             this.Check3.Name = "Check3";
             this.Check3.Size = new System.Drawing.Size(17, 24);
             this.Check3.TabIndex = 11;
@@ -172,7 +174,7 @@
             this.Check2.AutoSize = true;
             this.Check2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Check2.ForeColor = System.Drawing.Color.Red;
-            this.Check2.Location = new System.Drawing.Point(337, 54);
+            this.Check2.Location = new System.Drawing.Point(337, 93);
             this.Check2.Name = "Check2";
             this.Check2.Size = new System.Drawing.Size(17, 24);
             this.Check2.TabIndex = 12;
@@ -184,11 +186,30 @@
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
+            // CBTeachers
+            // 
+            this.CBTeachers.FormattingEnabled = true;
+            this.CBTeachers.Location = new System.Drawing.Point(125, 12);
+            this.CBTeachers.Name = "CBTeachers";
+            this.CBTeachers.Size = new System.Drawing.Size(210, 28);
+            this.CBTeachers.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Препод:";
+            // 
             // Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 370);
+            this.ClientSize = new System.Drawing.Size(364, 385);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CBTeachers);
             this.Controls.Add(this.Check2);
             this.Controls.Add(this.Check3);
             this.Controls.Add(this.Check1);
@@ -227,5 +248,7 @@
         private System.Windows.Forms.Label Check3;
         private System.Windows.Forms.Label Check2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox CBTeachers;
+        private System.Windows.Forms.Label label1;
     }
 }

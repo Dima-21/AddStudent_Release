@@ -12,9 +12,21 @@ namespace WindowsFormsApplication2
 {
     public partial class Dialog : Form
     {
+        BindingSource bsTeachers = new BindingSource();     
         public Dialog()
         {
             InitializeComponent();
+        }
+
+        public List<string> Teachers
+        {
+            set
+            {
+                bsTeachers.DataSource = value;
+                CBTeachers.DataSource = bsTeachers;
+                CBTeachers.DisplayMember = "value";
+                bsTeachers.ResetBindings(false);
+            }
         }
 
         public DateTime Birthday

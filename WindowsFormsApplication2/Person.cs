@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication2
 {
-    class Person
+    public class Person
     {
         public string FIO
         {
@@ -19,6 +19,8 @@ namespace WindowsFormsApplication2
         public string Surname { get; set; }
         public string Patronymic { get; set; }
         public DateTime Birthday { get; set; }
+        public string Teacher { get; set; }
+        public List<int> Marks { get; set; }
         public Person(string name, string surname, string patronymic, DateTime birthday)
         {
             Name = name;
