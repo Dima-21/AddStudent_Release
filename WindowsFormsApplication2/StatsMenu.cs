@@ -40,7 +40,7 @@ namespace WindowsFormsApplication2
         {
             get
             {
-                return LBMarks.Items.AddRange(value.Select(x => x.ToString()).ToArray());
+                return LBMarks.Items.OfType<String>().Select(x=>int.Parse(x)).ToList();
             }
             set
             {
