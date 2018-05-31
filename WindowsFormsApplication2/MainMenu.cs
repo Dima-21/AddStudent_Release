@@ -33,19 +33,6 @@ namespace WindowsFormsApplication2
             bsTeachers.ResetBindings(false);
         }
 
-        private void BAdd_Click(object sender, EventArgs e)
-        {
-            var wnd = new Dialog();
-            if (wnd.ShowDialog() == DialogResult.OK)
-            {
-                persons.Add(new Person(wnd.NameP, wnd.Surname, wnd.Patronymic, wnd.Birthday));
-            }
-            wnd.Dispose();
-            bsStudents.ResetBindings(false);
-        }
-
-
-
         private void listBox_DoubleClick(object sender, EventArgs e)
         {
             var selItem = LBStudents.SelectedItem as Person;
@@ -55,8 +42,22 @@ namespace WindowsFormsApplication2
             wnd.Surname = selItem.Surname;
             wnd.Patronymic = selItem.Patronymic;
             wnd.Birthday = selItem.Birthday;
+            wnd.SelectTeacher = selItem.Teacher;
+            wnd.Teachers = teachers;
             wnd.ShowDialog();
             wnd.Dispose();
+        }
+
+        private void BAdd_Click(object sender, EventArgs e)
+        {
+            var wnd = new Dialog();
+            wnd.Teachers = teachers;
+            if (wnd.ShowDialog() == DialogResult.OK)
+            {
+                persons.Add(new Person(wnd.NameP, wnd.Surname, wnd.Patronymic, wnd.Birthday));
+            }
+            wnd.Dispose();
+            bsStudents.ResetBindings(false);
         }
 
         private void BRemove_Click(object sender, EventArgs e)

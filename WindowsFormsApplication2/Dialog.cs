@@ -11,21 +11,26 @@ using System.Windows.Forms;
 namespace WindowsFormsApplication2
 {
     public partial class Dialog : Form
-    {
-        BindingSource bsTeachers = new BindingSource();     
+    {     
         public Dialog()
         {
             InitializeComponent();
         }
 
+
+
+        public string SelectTeacher
+        {
+            get { return CBTeachers.SelectedItem as String; }
+            set { CBTeachers.SelectedText  = value; }
+        }       
+
         public List<string> Teachers
         {
             set
             {
-                bsTeachers.DataSource = value;
-                CBTeachers.DataSource = bsTeachers;
-                CBTeachers.DisplayMember = "value";
-                bsTeachers.ResetBindings(false);
+                CBTeachers.Items.Clear();
+                CBTeachers.Items.AddRange(value.ToArray());
             }
         }
 
@@ -111,9 +116,6 @@ namespace WindowsFormsApplication2
             return true;
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
+    
     }
 }

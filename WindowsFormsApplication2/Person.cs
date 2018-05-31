@@ -28,5 +28,14 @@ namespace WindowsFormsApplication2
             Patronymic = patronymic;
             Birthday = birthday;
         }
+
+        public Person(string name, string surname, string patronymic, DateTime birthday, string teacher)
+        {
+            Name = name;
+            Surname = surname;
+            Patronymic = patronymic;
+            Birthday = birthday;
+            Teacher = teacher;
+        }
     }
 }
