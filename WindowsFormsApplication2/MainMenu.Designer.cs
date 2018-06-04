@@ -93,6 +93,7 @@
             this.CBTeachers.Name = "CBTeachers";
             this.CBTeachers.Size = new System.Drawing.Size(118, 21);
             this.CBTeachers.TabIndex = 5;
+            this.CBTeachers.SelectedIndexChanged += new System.EventHandler(this.CBTeachers_SelectedIndexChanged_1);
             // 
             // BChange
             // 

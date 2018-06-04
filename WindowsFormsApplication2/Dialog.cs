@@ -21,16 +21,16 @@ namespace WindowsFormsApplication2
 
         public string SelectTeacher
         {
-            get { return CBTeachers.SelectedItem as String; }
+            get { return CBTeachers.Text; }
             set { CBTeachers.SelectedText  = value; }
         }       
 
-        public List<string> Teachers
+        public List<Teacher> Teachers
         {
             set
             {
                 CBTeachers.Items.Clear();
-                CBTeachers.Items.AddRange(value.ToArray());
+                CBTeachers.Items.AddRange(value.Select(x=>x.Name).ToArray());
             }
         }
 

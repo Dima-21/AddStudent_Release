@@ -67,6 +67,7 @@
     <Compile Include="StatsMenu.Designer.cs">
       <DependentUpon>StatsMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher.cs" />
     <EmbeddedResource Include="Dialog.resx">
       <DependentUpon>Dialog.cs</DependentUpon>
     </EmbeddedResource>

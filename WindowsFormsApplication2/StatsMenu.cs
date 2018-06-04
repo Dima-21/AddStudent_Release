@@ -27,7 +27,7 @@ namespace WindowsFormsApplication2
             }
         }
 
-        public Person StudentName
+        public Student StudentName
         {
 
             set
