@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication2
 {
-    partial class Dialog
+    partial class AddStudent
     {
         /// <summary>
         /// Required designer variable.

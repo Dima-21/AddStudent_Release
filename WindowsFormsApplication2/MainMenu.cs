@@ -34,11 +34,16 @@ namespace WindowsFormsApplication2
             bsTeachers.ResetBindings(false);
         }
 
+        private void FilterStudents()
+        {
+            FilterStudent.Clear();
+            FilterStudent.AddRange(students.Where(x => x._Teacher.Name == ((Teacher)this.CBTeachers.SelectedItem).Name));
+        }
         private void listBox_DoubleClick(object sender, EventArgs e)
         {
             var selItem = LBStudents.SelectedItem as Student;
 
-            var wnd = new Dialog();
+            var wnd = new AddStudent();
             wnd.NameP = selItem.Name;
             wnd.Surname = selItem.Surname;
             wnd.Patronymic = selItem.Patronymic;
@@ -50,24 +55,22 @@ namespace WindowsFormsApplication2
 
         private void BAdd_Click(object sender, EventArgs e)
         {
-            var wnd = new Dialog();
+            var wnd = new AddStudent();
             wnd.Teachers = teachers;
             if (wnd.ShowDialog() == DialogResult.OK)
             {
                 students.Add(new Student { Name = wnd.NameP,  Surname = wnd.Surname, Patronymic = wnd.Patronymic, Birthday = wnd.Birthday});
-                foreach (var teacher in teachers)
-                {
-                    if (teacher.Name == wnd.SelectTeacher)
-                        teacher.Students.Add(students.Last());
-                }
+                students.Last()._Teacher = (from i in teachers where i.Name == wnd.SelectTeacher select i).First();
             }
             wnd.Dispose();
+            FilterStudents();
             bsStudents.ResetBindings(false);
         }
 
         private void BRemove_Click(object sender, EventArgs e)
         {
             students.Remove(LBStudents.SelectedItem as Student);
+            FilterStudents();
             bsStudents.ResetBindings(false);
         }
 
@@ -76,25 +79,23 @@ namespace WindowsFormsApplication2
             if (LBStudents.SelectedItems.Count != 0)
             {
                 var selItem = LBStudents.SelectedItem as Student;
-                var wnd = new Dialog();
+                var wnd = new AddStudent();
                 wnd.NameP = selItem.Name;
                 wnd.Surname = selItem.Surname;
                 wnd.Patronymic = selItem.Patronymic;
                 wnd.Birthday = selItem.Birthday;
-                wnd.ShowDialog();
+                wnd.Teachers = teachers;
+                
+                wnd.SelectTeacher = selItem._Teacher.Name;
+                if (wnd.ShowDialog() == DialogResult.OK)
+                    selItem._Teacher = new Teacher { Name = wnd.SelectTeacher };
                 wnd.Dispose();
             }
         }
 
         private void CBTeachers_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            FilterStudent.Clear();
-            foreach (var item in teachers)
-                if (item == (CBTeachers.SelectedItem as Teacher))
-                    foreach (var item1 in item.Students)
-                        if(item.Students.Count > 0)
-                            FilterStudent.Add(item1);
-
+            FilterStudents();
             bsStudents.ResetBindings(false);
         }
     }

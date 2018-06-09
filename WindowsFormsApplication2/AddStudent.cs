@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication2
 {
-    public partial class Dialog : Form
+    public partial class AddStudent : Form
     {     
-        public Dialog()
+        public AddStudent()
         {
             InitializeComponent();
         }
@@ -21,8 +21,8 @@ namespace WindowsFormsApplication2
 
         public string SelectTeacher
         {
-            get { return CBTeachers.Text; }
-            set { CBTeachers.SelectedText  = value; }
+            get { return (string)CBTeachers.SelectedItem; }
+            set { CBTeachers.SelectedValue  = value; }
         }       
 
         public List<Teacher> Teachers
@@ -42,6 +42,7 @@ namespace WindowsFormsApplication2
             }
             set
             {
+                Calendar.BoldedDates = new DateTime[] { value};
                 Calendar.SelectionStart = value;
             }
         }
