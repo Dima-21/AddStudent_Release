@@ -21,8 +21,8 @@ namespace WindowsFormsApplication2
 
         public string SelectTeacher
         {
-            get { return (string)CBTeachers.SelectedItem; }
-            set { CBTeachers.SelectedValue  = value; }
+            get { return CBTeachers.SelectedItem as String; }
+            set { CBTeachers.SelectedItem  = value; }
         }       
 
         public List<Teacher> Teachers
@@ -81,6 +81,8 @@ namespace WindowsFormsApplication2
             }
         }
 
+        public String Phone { get; set; }
+
         private void BApply_Click(object sender, EventArgs e)
         {
             if (Check())
@@ -98,17 +100,17 @@ namespace WindowsFormsApplication2
 
         private bool Check()
         {
-            if (Surname == "" || NameP == "" || Patronymic == "" || Char.IsLower(Surname[0]) || Char.IsLower(NameP[0]) || Char.IsLower(Patronymic[0]))
+            if (Surname == "" || NameP == "" || Patronymic == "")
             {
-                if (Surname == "" || Char.IsLower(Surname[0]))
+                if (Surname == "")
                     Check1.Visible = true;
                 else
                     Check1.Visible = false;
-                if (NameP == "" || Char.IsLower(NameP[0]))
+                if (NameP == "")
                     Check2.Visible = true;
                 else
                     Check2.Visible = false;
-                if (Patronymic == "" || Char.IsLower(Patronymic[0]))
+                if (Patronymic == "")
                     Check3.Visible = true;
                 else
                     Check3.Visible = false;
@@ -117,6 +119,16 @@ namespace WindowsFormsApplication2
             return true;
         }
 
-    
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsPunctuation(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void PressKey(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) || Char.IsPunctuation(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

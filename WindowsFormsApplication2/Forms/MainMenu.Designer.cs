@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.CBTeachers = new System.Windows.Forms.ComboBox();
             this.BChange = new System.Windows.Forms.Button();
+            this.BSMS = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LBStudents
@@ -106,11 +107,22 @@
             this.BChange.UseVisualStyleBackColor = true;
             this.BChange.Click += new System.EventHandler(this.BChange_Click);
             // 
+            // BSMS
+            // 
+            this.BSMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BSMS.Location = new System.Drawing.Point(136, 199);
+            this.BSMS.Name = "BSMS";
+            this.BSMS.Size = new System.Drawing.Size(91, 34);
+            this.BSMS.TabIndex = 7;
+            this.BSMS.Text = "SMS";
+            this.BSMS.UseVisualStyleBackColor = true;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(239, 267);
+            this.Controls.Add(this.BSMS);
             this.Controls.Add(this.BChange);
             this.Controls.Add(this.CBTeachers);
             this.Controls.Add(this.label2);
@@ -134,6 +146,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CBTeachers;
         private System.Windows.Forms.Button BChange;
+        private System.Windows.Forms.Button BSMS;
     }
 }
 

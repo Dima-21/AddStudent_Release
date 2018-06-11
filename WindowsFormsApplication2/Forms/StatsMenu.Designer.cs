@@ -31,11 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CBMarks = new System.Windows.Forms.ComboBox();
+            this.BAdd = new System.Windows.Forms.Button();
             this.LBMarks = new System.Windows.Forms.ListBox();
             this.LTeacher = new System.Windows.Forms.Label();
             this.LStudent = new System.Windows.Forms.Label();
+            this.BOk = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -65,29 +66,43 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Оценки:";
             // 
-            // comboBox1
+            // CBMarks
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(16, 130);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(43, 21);
-            this.comboBox1.TabIndex = 3;
+            this.CBMarks.FormattingEnabled = true;
+            this.CBMarks.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.CBMarks.Location = new System.Drawing.Point(16, 130);
+            this.CBMarks.Name = "CBMarks";
+            this.CBMarks.Size = new System.Drawing.Size(43, 21);
+            this.CBMarks.TabIndex = 3;
             // 
-            // button1
+            // BAdd
             // 
-            this.button1.Location = new System.Drawing.Point(65, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BAdd.Location = new System.Drawing.Point(65, 128);
+            this.BAdd.Name = "BAdd";
+            this.BAdd.Size = new System.Drawing.Size(43, 23);
+            this.BAdd.TabIndex = 4;
+            this.BAdd.Text = "Add";
+            this.BAdd.UseVisualStyleBackColor = true;
+            this.BAdd.Click += new System.EventHandler(this.BAdd_Click);
             // 
             // LBMarks
             // 
             this.LBMarks.FormattingEnabled = true;
             this.LBMarks.Location = new System.Drawing.Point(65, 74);
             this.LBMarks.Name = "LBMarks";
-            this.LBMarks.Size = new System.Drawing.Size(207, 30);
+            this.LBMarks.Size = new System.Drawing.Size(96, 30);
             this.LBMarks.TabIndex = 5;
             // 
             // LTeacher
@@ -108,16 +123,27 @@
             this.LStudent.TabIndex = 7;
             this.LStudent.Text = "-";
             // 
+            // BOk
+            // 
+            this.BOk.Location = new System.Drawing.Point(114, 128);
+            this.BOk.Name = "BOk";
+            this.BOk.Size = new System.Drawing.Size(57, 23);
+            this.BOk.TabIndex = 8;
+            this.BOk.Text = "OK";
+            this.BOk.UseVisualStyleBackColor = true;
+            this.BOk.Click += new System.EventHandler(this.BOk_Click);
+            // 
             // StatsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 177);
+            this.ClientSize = new System.Drawing.Size(238, 177);
+            this.Controls.Add(this.BOk);
             this.Controls.Add(this.LStudent);
             this.Controls.Add(this.LTeacher);
             this.Controls.Add(this.LBMarks);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.BAdd);
+            this.Controls.Add(this.CBMarks);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -133,10 +159,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox CBMarks;
+        private System.Windows.Forms.Button BAdd;
         private System.Windows.Forms.ListBox LBMarks;
         private System.Windows.Forms.Label LTeacher;
         private System.Windows.Forms.Label LStudent;
+        private System.Windows.Forms.Button BOk;
     }
 }

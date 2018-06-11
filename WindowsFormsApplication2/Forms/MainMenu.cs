@@ -42,15 +42,19 @@ namespace WindowsFormsApplication2
         private void listBox_DoubleClick(object sender, EventArgs e)
         {
             var selItem = LBStudents.SelectedItem as Student;
+            var wnd = new StatsMenu();
+            wnd.StudentName = $"{selItem.FIO}";
+            wnd.TeacherName = selItem._Teacher.Name;
+            wnd.Marks = selItem.Marks;
+            wnd.MarkChanged += Wnd_MarkChanged;
+            if(wnd.ShowDialog() == DialogResult.OK)
+                wnd.Dispose();
+        }
 
-            var wnd = new AddStudent();
-            wnd.NameP = selItem.Name;
-            wnd.Surname = selItem.Surname;
-            wnd.Patronymic = selItem.Patronymic;
-            wnd.Birthday = selItem.Birthday;
-            //wnd.Teachers = teachers;
-            wnd.ShowDialog();
-            wnd.Dispose();
+        private void Wnd_MarkChanged(object sender, MarkEventArgs e)
+        {
+            var selItem = students.First(x => x.FIO == e.StudentName);
+            selItem.Marks = e._Marks;
         }
 
         private void BAdd_Click(object sender, EventArgs e)
@@ -88,7 +92,14 @@ namespace WindowsFormsApplication2
                 
                 wnd.SelectTeacher = selItem._Teacher.Name;
                 if (wnd.ShowDialog() == DialogResult.OK)
+                {
                     selItem._Teacher = new Teacher { Name = wnd.SelectTeacher };
+                    selItem.Name = wnd.NameP;
+                    selItem.Surname = wnd.Surname;
+                    selItem.Patronymic = wnd.Patronymic;
+                    selItem.Birthday = wnd.Birthday;
+                    selItem.PhoneNumber = wnd.Phone;
+                }
                 wnd.Dispose();
             }
         }
