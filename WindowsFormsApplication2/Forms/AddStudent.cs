@@ -81,7 +81,11 @@ namespace WindowsFormsApplication2
             }
         }
 
-        public String Phone { get; set; }
+        public String Phone
+        {
+            get { return TPhone.Text; }
+            set { TPhone.Text = value; }
+        }
 
         private void BApply_Click(object sender, EventArgs e)
         {

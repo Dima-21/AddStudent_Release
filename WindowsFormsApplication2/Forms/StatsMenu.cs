@@ -85,7 +85,9 @@ namespace WindowsFormsApplication2
 
         private void BAdd_Click(object sender, EventArgs e)
         {
-            Marks.Add(int.Parse(CBMarks.Text));
+            var tmp = Marks;
+            tmp.Add(int.Parse(CBMarks.Text));
+            Marks = tmp;
         }
 
         private void BOk_Click(object sender, EventArgs e)

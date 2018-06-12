@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication2
 {
+    [Serializable]
     public class Student
     {
         public string FIO
@@ -15,6 +16,7 @@ namespace WindowsFormsApplication2
                 return $"{Surname} {Name[0]}.{Patronymic[0]}.";
             }
         }
+
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Patronymic { get; set; }

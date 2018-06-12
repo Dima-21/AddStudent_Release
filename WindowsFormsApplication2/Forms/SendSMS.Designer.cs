@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBNumber = new System.Windows.Forms.ComboBox();
             this.TName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextSMS = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TSymbols = new System.Windows.Forms.Label();
             this.BSend = new System.Windows.Forms.Button();
@@ -48,18 +48,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Номер телефона:";
             // 
-            // comboBox1
+            // CBNumber
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(15, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 21);
-            this.comboBox1.TabIndex = 1;
+            this.CBNumber.FormattingEnabled = true;
+            this.CBNumber.Location = new System.Drawing.Point(15, 25);
+            this.CBNumber.Name = "CBNumber";
+            this.CBNumber.Size = new System.Drawing.Size(134, 21);
+            this.CBNumber.TabIndex = 1;
             // 
             // TName
             // 
             this.TName.AutoSize = true;
-            this.TName.Location = new System.Drawing.Point(53, 57);
+            this.TName.Location = new System.Drawing.Point(20, 57);
             this.TName.Name = "TName";
             this.TName.Size = new System.Drawing.Size(0, 13);
             this.TName.TabIndex = 2;
@@ -73,13 +73,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Текст сообщения:";
             // 
-            // textBox1
+            // TextSMS
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 105);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 103);
-            this.textBox1.TabIndex = 4;
+            this.TextSMS.Location = new System.Drawing.Point(15, 105);
+            this.TextSMS.Multiline = true;
+            this.TextSMS.Name = "TextSMS";
+            this.TextSMS.Size = new System.Drawing.Size(257, 103);
+            this.TextSMS.TabIndex = 4;
             // 
             // label3
             // 
@@ -126,10 +126,10 @@
             this.Controls.Add(this.BSend);
             this.Controls.Add(this.TSymbols);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TextSMS);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TName);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CBNumber);
             this.Controls.Add(this.label1);
             this.Name = "SendSMS";
             this.Text = "Отправка SMS";
@@ -141,10 +141,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBNumber;
         private System.Windows.Forms.Label TName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TextSMS;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label TSymbols;
         private System.Windows.Forms.Button BSend;

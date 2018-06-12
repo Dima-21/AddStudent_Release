@@ -16,5 +16,11 @@ namespace WindowsFormsApplication2.Forms
         {
             InitializeComponent();
         }
+        public String PhoneNumber {
+            get{ return CBNumber.SelectedItem.ToString(); }
+            set { CBNumber.SelectedItem = value; }
+        }
+        public String SMSText { get; set; }
+        public int MyProperty { get; set; }
     }
 }

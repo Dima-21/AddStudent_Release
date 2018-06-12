@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication2
 {
+    [Serializable]
     public struct Teacher
     {
         public string Name { get; set; }
