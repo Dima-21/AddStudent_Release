@@ -36,10 +36,20 @@ namespace WindowsFormsApplication2
             teachers.Add(new Teacher { Name = "Чумак", PhoneNumber = "066545465" });
             teachers.Add(new Teacher { Name = "Хилько", PhoneNumber = "0630065544" });
             DeSerialize();
-            bsTeachers.ResetBindings(false);
+            CountTeacher.Text = teachers.Count.ToString();
+            CountStudent.Text = students.Count.ToString();
             bsStudents.ResetBindings(false);
+            bsTeachers.ResetBindings(false);
+            //Update();
         }
-
+        private void Update()
+        {
+            CountTeacher.Text = teachers.Count.ToString();
+            CountStudent.Text = students.Count.ToString();
+            FilterStudents();
+            bsStudents.ResetBindings(false);
+            bsTeachers.ResetBindings(false);
+        }
         private void FilterStudents()
         {
             FilterStudent.Clear();
@@ -73,16 +83,15 @@ namespace WindowsFormsApplication2
                 students.Last()._Teacher = (from i in teachers where i.Name == wnd.SelectTeacher select i).First();
             }
             wnd.Dispose();
-            FilterStudents();
-            bsStudents.ResetBindings(false);
+            Update();
             Serialize();
         }
 
         private void BRemove_Click(object sender, EventArgs e)
         {
             students.Remove(LBStudents.SelectedItem as Student);
-            FilterStudents();
-            bsStudents.ResetBindings(false);
+            Update();
+            Serialize();
         }
 
         private void BChange_Click(object sender, EventArgs e)
@@ -110,6 +119,7 @@ namespace WindowsFormsApplication2
                 }
                 wnd.Dispose();
             }
+            Serialize();
         }
 
         private void CBTeachers_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -137,11 +147,21 @@ namespace WindowsFormsApplication2
                 }
         }
 
-        //private void BSMS_Click(object sender, EventArgs e)
-        //{
-        //    var wnd = new Forms.SendSMS();
-        //    if(wnd.DialogResult == DialogResult.OK)
-        //        wnd
-        //}
+        private void SendSMS(string number, string text)
+        {
+
+        }
+
+        private void BSMS_Click(object sender, EventArgs e)
+        {
+            var wnd = new Forms.SendSMS();
+            wnd.Students = students;
+            wnd._Teacher = teachers.First(x => x.Name == CBTeachers.Text);
+            if (wnd.ShowDialog() == DialogResult.OK)
+                SendSMS(wnd.PhoneNumber, wnd.SMSText);
+            wnd.Dispose();
+        }
+
+
     }
 }

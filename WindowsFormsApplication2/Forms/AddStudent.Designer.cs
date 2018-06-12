@@ -82,12 +82,14 @@
             resources.ApplyResources(this.TName, "TName");
             this.TName.Name = "TName";
             this.toolTip1.SetToolTip(this.TName, resources.GetString("TName.ToolTip"));
+            this.TName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PressKey);
             // 
             // TPatronymic
             // 
             resources.ApplyResources(this.TPatronymic, "TPatronymic");
             this.TPatronymic.Name = "TPatronymic";
             this.toolTip1.SetToolTip(this.TPatronymic, resources.GetString("TPatronymic.ToolTip"));
+            this.TPatronymic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PressKey);
             // 
             // LDate
             // 

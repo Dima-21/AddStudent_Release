@@ -37,6 +37,8 @@
             this.TSymbols = new System.Windows.Forms.Label();
             this.BSend = new System.Windows.Forms.Button();
             this.BClear = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TCountSms = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -55,6 +57,7 @@
             this.CBNumber.Name = "CBNumber";
             this.CBNumber.Size = new System.Drawing.Size(134, 21);
             this.CBNumber.TabIndex = 1;
+            this.CBNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CBNumber_KeyPress);
             // 
             // TName
             // 
@@ -80,6 +83,7 @@
             this.TextSMS.Name = "TextSMS";
             this.TextSMS.Size = new System.Drawing.Size(257, 103);
             this.TextSMS.TabIndex = 4;
+            this.TextSMS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextSMS_KeyPress);
             // 
             // label3
             // 
@@ -101,27 +105,49 @@
             // 
             // BSend
             // 
-            this.BSend.Location = new System.Drawing.Point(116, 226);
+            this.BSend.Location = new System.Drawing.Point(116, 250);
             this.BSend.Name = "BSend";
             this.BSend.Size = new System.Drawing.Size(75, 23);
             this.BSend.TabIndex = 7;
             this.BSend.Text = "Send";
             this.BSend.UseVisualStyleBackColor = true;
+            this.BSend.Click += new System.EventHandler(this.BSend_Click);
             // 
             // BClear
             // 
-            this.BClear.Location = new System.Drawing.Point(197, 226);
+            this.BClear.Location = new System.Drawing.Point(197, 250);
             this.BClear.Name = "BClear";
             this.BClear.Size = new System.Drawing.Size(75, 23);
             this.BClear.TabIndex = 8;
             this.BClear.Text = "Clear";
             this.BClear.UseVisualStyleBackColor = true;
+            this.BClear.Click += new System.EventHandler(this.BClear_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(158, 211);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "SMS:";
+            // 
+            // TCountSms
+            // 
+            this.TCountSms.AutoSize = true;
+            this.TCountSms.Location = new System.Drawing.Point(194, 211);
+            this.TCountSms.Name = "TCountSms";
+            this.TCountSms.Size = new System.Drawing.Size(10, 13);
+            this.TCountSms.TabIndex = 10;
+            this.TCountSms.Text = "-";
             // 
             // SendSMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 280);
+            this.Controls.Add(this.TCountSms);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BClear);
             this.Controls.Add(this.BSend);
             this.Controls.Add(this.TSymbols);
@@ -149,5 +175,7 @@
         private System.Windows.Forms.Label TSymbols;
         private System.Windows.Forms.Button BSend;
         private System.Windows.Forms.Button BClear;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label TCountSms;
     }
 }
