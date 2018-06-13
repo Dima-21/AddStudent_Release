@@ -128,13 +128,6 @@
   <data name="BCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 42</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TPatronymic.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="Check4.ToolTip" xml:space="preserve">
-    <value>Выберите преподавателя</value>
-  </data>
   <data name="LName.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -150,6 +143,10 @@
   <data name="&gt;&gt;Check1.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="&gt;&gt;Check4.Name" xml:space="preserve">
+    <value>Check4</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
@@ -180,6 +177,9 @@
   <data name="TName.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="TPatronymic.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="LPatronymic.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -189,17 +189,11 @@
   <data name="Calendar.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;Check1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;Check3.Name" xml:space="preserve">
     <value>Check3</value>
   </data>
   <data name="Check2.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -218,6 +212,9 @@
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="LDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 178</value>
   </data>
   <data name="&gt;&gt;TName.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -240,11 +237,8 @@
   <data name="Calendar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>14, 14, 14, 14</value>
   </data>
-  <data name="BCancel.Text" xml:space="preserve">
-    <value>Отмена</value>
-  </data>
-  <data name="CBTeachers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 12</value>
+  <data name="BCancel.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;LName.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -285,14 +279,14 @@
   <data name="TPatronymic.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;Check2.Name" xml:space="preserve">
-    <value>Check2</value>
-  </data>
   <data name="Check2.Location" type="System.Drawing.Point, System.Drawing">
     <value>337, 93</value>
   </data>
   <data name="&gt;&gt;Check4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="LName.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 96</value>
@@ -336,9 +330,6 @@
   <data name="&gt;&gt;TPhone.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Препод:</value>
-  </data>
   <data name="LSurname.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 53</value>
   </data>
@@ -350,9 +341,6 @@
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 15</value>
-  </data>
-  <data name="&gt;&gt;BCancel.Name" xml:space="preserve">
-    <value>BCancel</value>
   </data>
   <data name="&gt;&gt;LDate.Name" xml:space="preserve">
     <value>LDate</value>
@@ -366,8 +354,8 @@
   <data name="LSurname.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="LDate.ToolTip" xml:space="preserve">
-    <value />
+  <data name="TSurname.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="TSurname.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -402,8 +390,8 @@
   <data name="&gt;&gt;Calendar.Type" xml:space="preserve">
     <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Check3.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="Check3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="LDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -420,8 +408,8 @@
   <data name="Calendar.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 212</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="LDate.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;BCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -444,12 +432,6 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;LPatronymic.Name" xml:space="preserve">
-    <value>LPatronymic</value>
-  </data>
-  <data name="TSurname.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="LSurname.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -462,17 +444,20 @@
   <data name="Check1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
+  <data name="&gt;&gt;Check3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Check3.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="BApply.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="Check1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 24</value>
   </data>
   <data name="&gt;&gt;BApply.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Check1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 24</value>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Check1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -480,14 +465,11 @@
   <data name="TPhone.Location" type="System.Drawing.Point, System.Drawing">
     <value>456, 60</value>
   </data>
-  <data name="&gt;&gt;Check4.Name" xml:space="preserve">
-    <value>Check4</value>
+  <data name="&gt;&gt;Check1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="Check2.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 24</value>
-  </data>
-  <data name="TPhone.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="TName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -507,8 +489,8 @@
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>349, 66</value>
   </data>
-  <data name="&gt;&gt;TPatronymic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="Check4.Location" type="System.Drawing.Point, System.Drawing">
     <value>337, 9</value>
@@ -519,11 +501,14 @@
   <data name="TName.Location" type="System.Drawing.Point, System.Drawing">
     <value>125, 93</value>
   </data>
-  <data name="TSurname.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;TName.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>364, 385</value>
   </data>
   <data name="Check5.ToolTip" xml:space="preserve">
     <value>Введите корректное имя</value>
@@ -531,8 +516,8 @@
   <data name="&gt;&gt;Check1.Name" xml:space="preserve">
     <value>Check1</value>
   </data>
-  <data name="&gt;&gt;TName.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="BApply.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;LName.Name" xml:space="preserve">
     <value>LName</value>
@@ -549,8 +534,14 @@
   <data name="TSurname.Size" type="System.Drawing.Size, System.Drawing">
     <value>210, 26</value>
   </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
   <data name="&gt;&gt;Check1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TPatronymic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Calendar.Name" xml:space="preserve">
     <value>Calendar</value>
@@ -561,11 +552,11 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="Check3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+  <data name="TSurname.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label2.ToolTip" xml:space="preserve">
     <value>Введите корректную фамилию</value>
@@ -597,17 +588,23 @@
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 20</value>
   </data>
+  <data name="&gt;&gt;LSurname.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
   <data name="&gt;&gt;LSurname.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="Check2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;TPatronymic.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;LSurname.ZOrder" xml:space="preserve">
-    <value>18</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Препод:</value>
   </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;LPatronymic.Name" xml:space="preserve">
+    <value>LPatronymic</value>
   </data>
   <data name="&gt;&gt;BApply.Name" xml:space="preserve">
     <value>BApply</value>
@@ -633,8 +630,8 @@
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Check2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="TPhone.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;Check5.Name" xml:space="preserve">
     <value>Check5</value>
@@ -654,8 +651,8 @@
   <data name="&gt;&gt;LPatronymic.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TPatronymic.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="LDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -666,8 +663,8 @@
   <data name="&gt;&gt;TPhone.Name" xml:space="preserve">
     <value>TPhone</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>364, 385</value>
+  <data name="&gt;&gt;Check3.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="LSurname.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -681,11 +678,11 @@
   <data name="LPatronymic.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 142</value>
   </data>
-  <data name="TPatronymic.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Check4.ToolTip" xml:space="preserve">
+    <value>Выберите преподавателя</value>
   </data>
-  <data name="BCancel.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;Check2.Name" xml:space="preserve">
+    <value>Check2</value>
   </data>
   <data name="LPatronymic.Text" xml:space="preserve">
     <value>Отчество:</value>
@@ -698,6 +695,9 @@
   </data>
   <data name="LPatronymic.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="Check3.Location" type="System.Drawing.Point, System.Drawing">
     <value>337, 139</value>
@@ -714,8 +714,8 @@
   <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Check3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;BCancel.Name" xml:space="preserve">
+    <value>BCancel</value>
   </data>
   <data name="BApply.Location" type="System.Drawing.Point, System.Drawing">
     <value>203, 284</value>
@@ -723,8 +723,8 @@
   <data name="LDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="LDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 178</value>
+  <data name="CBTeachers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 12</value>
   </data>
   <data name="&gt;&gt;LName.Parent" xml:space="preserve">
     <value>$this</value>
@@ -735,8 +735,8 @@
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="BCancel.Text" xml:space="preserve">
+    <value>Отмена</value>
   </data>
   <data name="&gt;&gt;LPatronymic.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

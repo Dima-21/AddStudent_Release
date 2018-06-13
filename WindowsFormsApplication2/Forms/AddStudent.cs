@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace WindowsFormsApplication2
 {
     public partial class AddStudent : Form
-    {     
+    {
         public AddStudent()
         {
             InitializeComponent();
@@ -22,15 +22,15 @@ namespace WindowsFormsApplication2
         public string SelectTeacher
         {
             get { return CBTeachers.SelectedItem as String; }
-            set { CBTeachers.SelectedItem  = value; }
-        }       
+            set { CBTeachers.SelectedItem = value; }
+        }
 
         public List<Teacher> Teachers
         {
             set
             {
                 CBTeachers.Items.Clear();
-                CBTeachers.Items.AddRange(value.Select(x=>x.Name).ToArray());
+                CBTeachers.Items.AddRange(value.Select(x => x.Name).ToArray());
             }
         }
 
@@ -42,7 +42,7 @@ namespace WindowsFormsApplication2
             }
             set
             {
-                Calendar.BoldedDates = new DateTime[] { value};
+                Calendar.BoldedDates = new DateTime[] { value };
                 Calendar.SelectionStart = value;
             }
         }
@@ -83,7 +83,13 @@ namespace WindowsFormsApplication2
 
         public String Phone
         {
-            get { return TPhone.Text; }
+            get
+            {
+                if (TPhone.Text[0] == '0')
+                    return TPhone.Text.Insert(0, "+38");
+                else
+                    return TPhone.Text.Insert(0, "+");
+            }
             set { TPhone.Text = value; }
         }
 
@@ -102,9 +108,18 @@ namespace WindowsFormsApplication2
             this.Close();
         }
 
+
+        private bool CheckNumber()
+        {
+            if ((TPhone.Text.Length == 10 && TPhone.Text[0] == '0') ||
+                (TPhone.Text.Length == 12 && TPhone.Text.Substring(0, 3) == "380"))
+                return true;
+            return false;
+        }
+
         private bool Check()
         {
-            if (Surname == "" || NameP == "" || Patronymic == "")
+            if (Surname == "" || NameP == "" || Patronymic == "" || !CheckNumber())
             {
                 if (Surname == "")
                     Check1.Visible = true;
@@ -118,6 +133,10 @@ namespace WindowsFormsApplication2
                     Check3.Visible = true;
                 else
                     Check3.Visible = false;
+                if (!CheckNumber())
+                    Check5.Visible = true;
+                else
+                    Check5.Visible = false;
                 return false;
             }
             return true;
@@ -125,7 +144,8 @@ namespace WindowsFormsApplication2
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsLetter(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsPunctuation(e.KeyChar))
+            
+            if (Char.IsLetter(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || TPhone.Text.Length > 13)
                 e.Handled = true;
         }
 
@@ -134,5 +154,6 @@ namespace WindowsFormsApplication2
             if (Char.IsDigit(e.KeyChar) || Char.IsPunctuation(e.KeyChar))
                 e.Handled = true;
         }
+
     }
 }

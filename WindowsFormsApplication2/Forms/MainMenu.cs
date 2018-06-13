@@ -20,6 +20,7 @@ namespace WindowsFormsApplication2
         List<Student> FilterStudent = new List<Student>();
         BindingSource bsStudents = new BindingSource();
         BindingSource bsTeachers = new BindingSource();
+        bool isSave;
 
         public MainMenu()
         {
@@ -40,6 +41,7 @@ namespace WindowsFormsApplication2
             CountStudent.Text = students.Count.ToString();
             bsStudents.ResetBindings(false);
             bsTeachers.ResetBindings(false);
+            isSave = true;
             //Update();
         }
         private void Update()
@@ -81,17 +83,17 @@ namespace WindowsFormsApplication2
             {
                 students.Add(new Student { Name = wnd.NameP, Surname = wnd.Surname, Patronymic = wnd.Patronymic, Birthday = wnd.Birthday });
                 students.Last()._Teacher = (from i in teachers where i.Name == wnd.SelectTeacher select i).First();
+                isSave = false;
             }
             wnd.Dispose();
             Update();
-            Serialize();
         }
 
         private void BRemove_Click(object sender, EventArgs e)
         {
             students.Remove(LBStudents.SelectedItem as Student);
+            isSave = false;
             Update();
-            Serialize();
         }
 
         private void BChange_Click(object sender, EventArgs e)
@@ -119,7 +121,6 @@ namespace WindowsFormsApplication2
                 }
                 wnd.Dispose();
             }
-            Serialize();
         }
 
         private void CBTeachers_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -131,15 +132,25 @@ namespace WindowsFormsApplication2
         private void Serialize()
         {
             BinaryFormatter bf = new BinaryFormatter();
+            using (var fs = new FileStream(FileName[1], FileMode.OpenOrCreate))
+            {
+                bf.Serialize(fs, teachers);
+            }
             using (var fs = new FileStream(FileName[0], FileMode.OpenOrCreate))
             {
                 bf.Serialize(fs, students);
             }
+            isSave = true;
         }
 
         private void DeSerialize()
         {
             BinaryFormatter bf = new BinaryFormatter();
+            if (File.Exists(FileName[1]))
+                using (var fs = new FileStream(FileName[1], FileMode.Open))
+                {
+                    teachers = bf.Deserialize(fs) as List<Teacher>;
+                }
             if (File.Exists(FileName[0]))
                 using (var fs = new FileStream(FileName[0], FileMode.Open))
                 {
@@ -162,6 +173,16 @@ namespace WindowsFormsApplication2
             wnd.Dispose();
         }
 
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Serialize();
+        }
 
+        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var wnd = new Forms.SaveDialog();
+            if (!isSave && wnd.ShowDialog() == DialogResult.OK)
+                Serialize();
+        }
     }
 }
